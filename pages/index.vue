@@ -1,37 +1,54 @@
-<script>
+<script setup lang="ts">
 const players = [
   {
     firstname: "Mike",
     name: "Maignan",
     position: "Gardien",
   },
+  {
+    firstname: "Kylian",
+    name: "Mbappe",
+    position: "Attaquant",
+  },
+  {
+    firstname: "N'Golo",
+    name: "Kanté",
+    position: "Milieu de terrain",
+  },
 ];
-console.log("players:", players);
+console.log("players", players);
 </script>
 
 <template>
   <div class="text-center text-white pt-10">
-    <h1 class="text-white text-2xl pb-2">Bienvenue sur Pronote Football</h1>
-    <h2 class="text-white text-lg">
-      Notez les joueurs de l'équipe de France après leurs matchs à l'euro 2024
-    </h2>
-    <h3 class="text-lg mt-8">Autriche - France</h3>
-    <h4 class="text-xs">Euro 2024 - ESPRIT arena de Dusseldorf</h4>
-    <div class="bg-white w-1/2 h-14 mx-auto rounded-xl mt-8">
-      <h3 class="text-start ml-2 pt-1 text-black font-bold">Mike Maignan</h3>
-      <p class="text-start ml-2 text-black">Gardien</p>
-      <div class="pt-1">
-        <button class="text-white py-2 px-4">0</button>
-        <button class="text-white py-2 px-4 ml-1">1</button>
-        <button class="text-white py-2 px-4 ml-1">2</button>
-        <button class="text-white py-2 px-4 ml-1">3</button>
-        <button class="text-white py-2 px-4 ml-1">4</button>
-        <button class="text-white py-2 px-4 ml-1">5</button>
-        <button class="text-white py-2 px-4 ml-1">6</button>
-        <button class="text-white py-2 px-4 ml-1">7</button>
-        <button class="text-white py-2 px-4 ml-1">8</button>
-        <button class="text-white py-2 px-4 ml-1">9</button>
-        <button class="text-white py-2 px-4 ml-1">10</button>
+    <div class="mb-8">
+      <h1 class="text-white text-2xl pb-2">Bienvenue sur Pronote Football</h1>
+      <h2 class="text-white text-lg">
+        Notez les joueurs de l'équipe de France après leurs matchs à l'euro 2024
+      </h2>
+      <h3 class="text-lg mt-8">Autriche - France</h3>
+      <h4 class="text-xs">Euro 2024 - ESPRIT arena de Dusseldorf</h4>
+    </div>
+    <div
+      class="w-1/2 h-34 bg-white rounded-xl mx-auto mt-5 overflow-hidden"
+      v-for="player in players"
+    >
+      <h3 class="text-start ml-2 pt-1 text-black font-bold">
+        {{ player.firstname }} {{ player.name }}
+      </h3>
+      <p class="text-start ml-2 text-black">{{ player.position }}</p>
+      <div class="text-start ml-1">
+        <button class="text-black py-1 px-1">0</button>
+        <button class="text-black py-1 px-1">1</button>
+        <button class="text-black py-1 px-1">2</button>
+        <button class="text-black py-1 px-1">3</button>
+        <button class="text-black py-1 px-1">4</button>
+        <button class="text-black py-1 px-1">5</button>
+        <button class="text-black py-1 px-1">6</button>
+        <button class="text-black py-1 px-1">7</button>
+        <button class="text-black py-1 px-1">8</button>
+        <button class="text-black py-1 px-1">9</button>
+        <button class="text-black py-1 px-1">10</button>
       </div>
     </div>
   </div>
