@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { data } = await useFetch("/api/players");
 const players = [
   {
     firstname: "Mike",
@@ -56,7 +57,6 @@ const players = [
     position: "Attaquant",
   },
 ];
-console.log("players", players);
 </script>
 
 <template>
