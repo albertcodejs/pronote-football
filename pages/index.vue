@@ -1,62 +1,7 @@
 <script setup lang="ts">
 const { data } = await useFetch("/api/players");
-const players = [
-  {
-    firstname: "Mike",
-    name: "Maignan",
-    position: "Gardien",
-  },
-  {
-    firstname: "Jules",
-    name: "Koundé",
-    position: "Défenseur",
-  },
-  {
-    firstname: "Benjamin",
-    name: "Pavard",
-    position: "Défenseur",
-  },
-  {
-    firstname: "Jonathan",
-    name: "Clauss",
-    position: "Défenseur",
-  },
-  {
-    firstname: "Dayot",
-    name: "Upamecano",
-    position: "Défenseur",
-  },
-  {
-    firstname: "N'Golo",
-    name: "Kanté",
-    position: "Milieu de terrain",
-  },
-  {
-    firstname: "Antoine",
-    name: "Griezmann",
-    position: "Milieu de terrain",
-  },
-  {
-    firstname: "Warren",
-    name: "Zaïre-Emery",
-    position: "Milieu de terrain",
-  },
-  {
-    firstname: "Kylian",
-    name: "Mbappe",
-    position: "Attaquant",
-  },
-  {
-    firstname: "Bradley",
-    name: "Barcola",
-    position: "Attaquant",
-  },
-  {
-    firstname: "Ousmane",
-    name: "Dembélé",
-    position: "Attaquant",
-  },
-];
+const games = await useFetch("/api/games");
+console.log("games", games);
 </script>
 
 <template>
@@ -71,7 +16,7 @@ const players = [
     </div>
     <div
       class="w-1/2 h-34 bg-white rounded-xl mx-auto mt-5 overflow-hidden"
-      v-for="player in players"
+      v-for="player in data"
     >
       <h3 class="text-start ml-2 pt-1 text-black font-bold">
         {{ player.firstname }} {{ player.name }}
