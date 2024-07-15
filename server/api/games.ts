@@ -3,5 +3,7 @@ export default defineEventHandler((event) => {
     first: "Autriche - France",
     second: "Pays-Bas - France",
     third: "France - Pologne",
+    fourth: "France - Portugal",
+    fifth: "France - Espagne",
   };
 });
