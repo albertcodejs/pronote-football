@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const { data } = await useFetch("/api/players");
 const games = await useFetch("/api/games");
-console.log("games", games);
 </script>
 
 <template>

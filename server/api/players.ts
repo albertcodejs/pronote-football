@@ -55,5 +55,20 @@ export default defineEventHandler((event) => {
       name: "Dembélé",
       position: "Attaquant",
     },
+    {
+      firstname: "Olivier",
+      name: "Giroud",
+      position: "Attaquant",
+    },
+    {
+      firstname: "Marcus",
+      name: "Thuram",
+      position: "Attaquant",
+    },
+    {
+      firstname: "William",
+      name: "Saliba",
+      position: "Défenseur",
+    },
   ];
 });
