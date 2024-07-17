@@ -33,12 +33,12 @@ export default defineEventHandler((event) => {
       location: "Leipzig",
     },
     {
-      name: "",
-      location: "",
+      name: "Munich Football Arena",
+      location: "Munich",
     },
     {
-      name: "",
-      location: "",
+      name: "Stuttgart Arena",
+      location: "Stuttgart",
     },
   ];
 });
