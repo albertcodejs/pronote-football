@@ -7,11 +7,9 @@ const games = await useFetch("/api/games");
   <div class="text-center text-white pt-10">
     <div class="mb-8">
       <h1 class="text-white text-2xl pb-2">Bienvenue sur Pronote Football</h1>
-      <h2 class="text-white text-lg">
-        Notez les joueurs de l'équipe de France après leurs matchs à l'euro 2024
-      </h2>
-      <h3 class="text-lg mt-8">Autriche - France</h3>
-      <h4 class="text-xs">Euro 2024 - ESPRIT arena de Dusseldorf</h4>
+      <h2 class="text-white text-lg">Notes d'après-match</h2>
+      <h3 class="text-lg mt-8">Équipe 1 vs Équipe 2</h3>
+      <h4 class="text-xs">Compétition - Stade</h4>
     </div>
     <div
       class="w-1/2 h-34 bg-white rounded-xl mx-auto mt-5 overflow-hidden"
