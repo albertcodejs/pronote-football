@@ -1,22 +1,23 @@
 <template>
   <div>
-    <header class="flex justify-evenly pt-2 pb-2 bg-white">
-      <img
-        class="w-12 h-12"
-        src="../public/logo.png"
-        alt="pronote football logo"
-      />
-      <a href="#" class="content-center">Pronote football</a>
-      <a href="#" class="content-center">Players</a>
-      <a href="#" class="content-center">Ligue 1</a>
-      <a href="#" class="content-center">Champions league</a>
+    <header class="bg-white flex flex-row justify-between pt-2 pb-2 pl-4 pr-4">
+      <div>
+        <a href="#">
+          <img
+            class="w-12 h-12"
+            src="../public/logo.png"
+            alt="pronote football logo"
+          />
+        </a>
+      </div>
+      <div class="content-center">
+        <i class="fa-solid fa-bars text-2xl"></i>
+        <!-- <a href="#" class="mr-1 sm:mr-4">Pronote football</a>
+        <a href="#" class="sm:mr-4">Derniers matchs à noter</a>
+        <a href="#" class="sm:mr-4">Joueurs</a>
+        <a href="#" class="sm:mr-4">Championnat</a> -->
+      </div>
     </header>
     <slot />
-    <footer class="flex">
-      <a class="text-white pb-2">Pronote Football</a>
-      <a class="text-white pb-2">À propos</a>
-      <a class="text-white pb-2">Classement Ligue 1</a>
-      <a class="text-white pb-2">Classement Europe</a>
-    </footer>
   </div>
 </template>

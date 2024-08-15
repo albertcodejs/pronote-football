@@ -7,7 +7,11 @@ const games = await useFetch("/api/games");
   <div class="text-center text-white pt-10">
     <div class="mb-8">
       <h1 class="text-white text-2xl pb-2">Bienvenue sur Pronote Football</h1>
-      <h2 class="text-white text-lg">Notes d'après-match</h2>
+      <h2 class="text-white text-lg">
+        Le site qui te permet d'attribuer les notes d'après-match de ton équipe
+        préférée
+      </h2>
+      <h2 class="mt-10 text-2xl">Les derniers matchs à noter</h2>
       <h3 class="text-lg mt-8">Équipe 1 vs Équipe 2</h3>
       <h4 class="text-xs">Compétition - Stade</h4>
     </div>
