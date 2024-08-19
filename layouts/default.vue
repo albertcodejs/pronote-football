@@ -1,12 +1,15 @@
 <script setup>
-function hello() {
-  console.log("hello");
-}
+import { ref } from "vue";
+
+let mobile = true;
+let mobileNav = ref(true);
 </script>
 
 <template>
   <div>
-    <header class="bg-white flex flex-row justify-between pt-2 pb-2 pl-4 pr-4">
+    <header
+      class="fixed w-full bg-white flex flex-row justify-between pt-2 pb-2 pl-4 pr-4"
+    >
       <div>
         <a href="#">
           <img
@@ -17,15 +20,42 @@ function hello() {
         </a>
       </div>
       <div class="content-center">
-        <i class="fa-solid fa-bars text-2xl" @click="hello()"></i>
+        <i
+          class="fa-solid fa-bars text-2xl"
+          :class="{ 'icon-active': mobileNav }"
+          v-show="mobile"
+          @click="mobileNav = !mobileNav"
+        ></i>
+        <!-- <i class="fa-solid fa-xmark text-2xl"></i> -->
       </div>
-      <!--
-      <div class="flex content-center">
-        <a href="#" class="mr-1 sm:mr-4">Pronote football</a>
-        <a href="#" class="sm:mr-4">Derniers matchs à noter</a>
-        <a href="#" class="sm:mr-4">Joueurs</a>
-        <a href="#" class="sm:mr-4">Championnat</a>
-      </div> -->
+      <ul
+        class="flex content-center list-none no-underline text-xs"
+        v-show="!mobile"
+      >
+        <li><a href="#" class="mr-1 sm:mr-4">Pronote football</a></li>
+        <li><a href="#" class="mr-1 sm:mr-4">Derniers matchs à noter</a></li>
+        <li><a href="#" class="mr-1 sm:mr-4">Joueurs</a></li>
+        <li><a href="#" class="mr-1 sm:mr-4">Championnat</a></li>
+      </ul>
+      <transition name="mobile-nav">
+        <ul
+          v-show="mobileNav"
+          class="flex flex-col fixed w-full max-w-64 h-full dropdown-nav bg-white top-0 left-0 pt-5 pb-20"
+        >
+          <li class="pl-2 pb-5 uppercase font-bold">
+            <a href="#" class="mr-1 sm:mr-4 text-red-800">Pronote football</a>
+          </li>
+          <li class="pl-2 pb-5 uppercase font-bold">
+            <a href="#" class="sm:mr-4 text-red-800">Derniers matchs à noter</a>
+          </li>
+          <li class="pl-2 pb-5 uppercase font-bold">
+            <a href="#" class="sm:mr-4 text-red-800">Joueurs</a>
+          </li>
+          <li class="pl-2 pb-5 uppercase font-bold">
+            <a href="#" class="sm:mr-4 text-red-800">Championnat</a>
+          </li>
+        </ul>
+      </transition>
     </header>
     <slot />
   </div>

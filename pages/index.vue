@@ -4,7 +4,7 @@ const games = await useFetch("/api/games");
 </script>
 
 <template>
-  <div class="text-center text-white pt-10">
+  <div class="text-center text-white pt-20">
     <div class="mb-8">
       <h1 class="text-white text-2xl pb-2">Bienvenue sur Pronote Football</h1>
       <h2 class="text-white text-lg">
