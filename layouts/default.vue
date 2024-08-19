@@ -26,7 +26,7 @@ let mobileNav = ref(true);
           v-show="mobile"
           @click="mobileNav = !mobileNav"
         ></i>
-        <!-- <i class="fa-solid fa-xmark text-2xl"></i> -->
+        <i class="fa-solid fa-xmark text-2xl"></i>
       </div>
       <ul
         class="flex content-center list-none no-underline text-xs"
