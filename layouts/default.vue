@@ -1,8 +1,24 @@
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+import type { Ref } from "vue";
 
-let mobile = true;
-let mobileNav = ref(false);
+let onMobile: Ref<boolean> = ref(false);
+let mobileNav: Ref<boolean> = ref(false);
+let windowWidth: number;
+
+function checkScreen() {
+  windowWidth = window.innerWidth;
+  if (windowWidth <= 750) {
+    onMobile.value = true;
+  } else {
+    onMobile.value = false;
+    mobileNav.value = false;
+  }
+}
+
+onMounted(() => {
+  window.addEventListener("resize", checkScreen);
+});
 </script>
 
 <template>
@@ -19,10 +35,10 @@ let mobileNav = ref(false);
           />
         </a>
       </div>
-      <div class="content-center">
+      <div class="content-center" v-show="onMobile">
         <i
           class="fa-solid fa-xmark text-2xl"
-          v-if="mobile && mobileNav"
+          v-if="onMobile && mobileNav"
           @click="mobileNav = !mobileNav"
         ></i>
         <i
@@ -32,15 +48,24 @@ let mobileNav = ref(false);
           v-else
         ></i>
       </div>
-      <ul
-        class="flex content-center list-none no-underline text-xs"
-        v-show="!mobile"
-      >
-        <li><a href="#" class="mr-1 sm:mr-4">Pronote football</a></li>
-        <li><a href="#" class="mr-1 sm:mr-4">Derniers matchs à noter</a></li>
-        <li><a href="#" class="mr-1 sm:mr-4">Joueurs</a></li>
-        <li><a href="#" class="mr-1 sm:mr-4">Championnat</a></li>
-      </ul>
+      <div class="content-center" v-show="!onMobile">
+        <ul class="flex list-none no-underline text-sm">
+          <li>
+            <a href="#" class="mr-1 sm:mr-4 cursor-pointer">Pronote football</a>
+          </li>
+          <li>
+            <a href="#" class="mr-1 sm:mr-4 cursor-pointer"
+              >Derniers matchs à noter</a
+            >
+          </li>
+          <li>
+            <a href="#" class="mr-1 sm:mr-4 cursor-pointer">Joueurs</a>
+          </li>
+          <li>
+            <a href="#" class="mr-1 sm:mr-4 cursor-pointer">Championnat</a>
+          </li>
+        </ul>
+      </div>
       <transition name="mobile-nav">
         <ul
           v-show="mobileNav"

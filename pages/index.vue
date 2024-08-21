@@ -9,8 +9,9 @@ const games = await useFetch("/api/games");
       <h1 class="text-white text-2xl pb-2">Bienvenue sur Pronote Football</h1>
       <h2 class="text-white text-lg">
         Le site qui te permet d'attribuer les notes d'après-match de ton équipe
-        préférée
+        préférée.
       </h2>
+      <h2>Une plateforme créer par des footix pour des footix</h2>
       <h2 class="mt-10 text-2xl">Les derniers matchs à noter</h2>
       <h3 class="text-lg mt-8">Équipe 1 vs Équipe 2</h3>
       <h4 class="text-xs">Compétition - Stade</h4>
