@@ -16,25 +16,25 @@ const games = await useFetch("/api/games");
       <h4 class="text-xs">Compétition - Stade</h4>
     </div>
     <div
-      class="w-1/2 h-34 bg-white rounded-xl mx-auto mt-5 overflow-hidden"
+      class="h-34 bg-white rounded-xl mx-auto mt-5 overflow-hidden"
       v-for="player in data"
     >
-      <h3 class="text-start ml-2 pt-1 text-black font-bold">
+      <h3 class="text-start ml-2 pt-1 text-red-800 font-bold">
         {{ player.firstname }} {{ player.name }}
       </h3>
-      <p class="text-start ml-2 text-black">{{ player.position }}</p>
+      <p class="text-start ml-1 text-red-800">{{ player.position }}</p>
       <div class="text-start ml-1">
-        <button class="text-black py-1 px-1">0</button>
-        <button class="text-black py-1 px-1">1</button>
-        <button class="text-black py-1 px-1">2</button>
-        <button class="text-black py-1 px-1">3</button>
-        <button class="text-black py-1 px-1">4</button>
-        <button class="text-black py-1 px-1">5</button>
-        <button class="text-black py-1 px-1">6</button>
-        <button class="text-black py-1 px-1">7</button>
-        <button class="text-black py-1 px-1">8</button>
-        <button class="text-black py-1 px-1">9</button>
-        <button class="text-black py-1 px-1">10</button>
+        <button class="text-red-800 py-1 px-1">0</button>
+        <button class="text-red-800 py-1 px-1">1</button>
+        <button class="text-red-800 py-1 px-1">2</button>
+        <button class="text-red-800 py-1 px-1">3</button>
+        <button class="text-red-800 py-1 px-1">4</button>
+        <button class="text-red-800 py-1 px-1">5</button>
+        <button class="text-red-800 py-1 px-1">6</button>
+        <button class="text-red-800 py-1 px-1">7</button>
+        <button class="text-red-800 py-1 px-1">8</button>
+        <button class="text-red-800 py-1 px-1">9</button>
+        <button class="text-red-800 py-1 px-1">10</button>
       </div>
     </div>
   </div>
