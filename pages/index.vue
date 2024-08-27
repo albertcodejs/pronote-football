@@ -33,12 +33,14 @@ const { data } = await useFetch("/api/players");
       <button
         type="button"
         class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+        id="1"
       >
         1
       </button>
       <button
         type="button"
         class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+        id="2"
       >
         2
       </button>
