@@ -1,10 +1,9 @@
 <script setup lang="ts">
 const { data } = await useFetch("/api/players");
-const games = await useFetch("/api/games");
 </script>
 
 <template>
-  <div class="text-center text-white pt-20">
+  <div class="text-center text-white pt-20 mx-4">
     <div class="mb-8">
       <h1 class="text-white text-2xl pb-2">Bienvenue sur Pronote Football</h1>
       <h2 class="text-white text-lg">
@@ -15,27 +14,82 @@ const games = await useFetch("/api/games");
       <h3 class="text-lg mt-8">Équipe 1 vs Équipe 2</h3>
       <h4 class="text-xs">Compétition - Stade</h4>
     </div>
+
     <div
-      class="h-34 bg-white rounded-xl mx-auto mt-5 overflow-hidden"
+      class="h-34 bg-white rounded-full py-2 mt-5 overflow-hidden"
       v-for="player in data"
     >
-      <h3 class="text-start ml-2 pt-1 text-red-800 font-bold">
+      <h3 class="text-center ml-2 pt-1 text-black font-bold">
         {{ player.firstname }} {{ player.name }}
       </h3>
-      <p class="text-start ml-1 text-red-800">{{ player.position }}</p>
-      <div class="text-start ml-1">
-        <button class="text-red-800 py-1 px-1">0</button>
-        <button class="text-red-800 py-1 px-1">1</button>
-        <button class="text-red-800 py-1 px-1">2</button>
-        <button class="text-red-800 py-1 px-1">3</button>
-        <button class="text-red-800 py-1 px-1">4</button>
-        <button class="text-red-800 py-1 px-1">5</button>
-        <button class="text-red-800 py-1 px-1">6</button>
-        <button class="text-red-800 py-1 px-1">7</button>
-        <button class="text-red-800 py-1 px-1">8</button>
-        <button class="text-red-800 py-1 px-1">9</button>
-        <button class="text-red-800 py-1 px-1">10</button>
-      </div>
+      <p class="text-center ml-1 text-black">{{ player.position }}</p>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+        id="0"
+      >
+        0
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        1
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        2
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        3
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        4
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        5
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        6
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        7
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        8
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        9
+      </button>
+      <button
+        type="button"
+        class="text-black hover:bg-slate-300 rounded-full py-1 px-2"
+      >
+        10
+      </button>
     </div>
   </div>
 </template>
